@@ -1,9 +1,5 @@
 #!/bin/bash
 
 # Replace placeholders in HTML with environment variables
-envsubst < /usr/share/nginx/html/sr-landing.html > /usr/share/nginx/html/index.html.tmp
-mv /usr/share/nginx/html/index.html.tmp /usr/share/nginx/html/index.html
-
-# Start NGINX
-nginx -g 'daemon off;'
-
+envsubst < /usr/share/nginx/html/sr-landing.html > /usr/share/nginx/html/index.html
+rm /usr/share/nginx/html/sr-landing.html
