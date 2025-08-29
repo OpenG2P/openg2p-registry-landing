@@ -17,3 +17,5 @@ ENV SR_SUPERSET_URL="https://kafka.explore.openg2p.org"
 ENV SR_KEYCLOAK_ACCOUNT_CONSOLE_URL="https://keycloak.openg2p.org/realms/public/account"
 ENV SR_VERSION="develop"
 ENV SR_APP_VERSION="develop"
+
+CMD ["/docker-entrypoint.d/50-landing-entrypoint.sh"]
