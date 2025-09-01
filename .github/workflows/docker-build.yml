@@ -52,3 +52,4 @@ jobs:
       - name: Docker Push images
         run: |
           docker push $IMAGE_ID:$VERSION
+          
