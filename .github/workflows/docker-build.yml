@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NAMESPACE: ${{ secrets.docker_hub_organisation }}
-      IMAGE_NAME: "openg2p-social-registry-landing"
+      IMAGE_NAME: "openg2p-registry-landing"
     steps:
       - uses: actions/checkout@v3
       - name: Setup branch and env
