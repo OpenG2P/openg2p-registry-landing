@@ -4,7 +4,8 @@ FROM nginx:latest
 COPY ./html/sr-landing.html /usr/share/nginx/html
 
 # Copy the entrypoint script
-COPY entrypoint.sh /docker-entrypoint.d/50-landing-entrypoint.sh
+COPY ./entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 # Set environment variable for testing (can be overridden in deployment)
 ENV SR_ADMIN_URL="https://admin.explore.openg2p.org"
@@ -18,4 +19,4 @@ ENV SR_KEYCLOAK_ACCOUNT_CONSOLE_URL="https://keycloak.openg2p.org/realms/public/
 ENV SR_VERSION="develop"
 ENV SR_APP_VERSION="develop"
 
-CMD ["/docker-entrypoint.d/50-landing-entrypoint.sh"]
+CMD ["/entrypoint.sh"]
